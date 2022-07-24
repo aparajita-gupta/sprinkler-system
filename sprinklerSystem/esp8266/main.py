@@ -41,7 +41,7 @@ def do_connect():
                 s1 = str(ubinascii.hexlify(str(sc2), ":"))
                 print(s1) """
        # print("Scanned.... {}".format(sc))
-        ret = wlan.connect(ssid, password, bssid=bssid1)
+        ret = wlan.connect(ssid, password)
         print ("ret: {}".format(ret))
         while not wlan.isconnected():
            print("Failed.... {}".format(count))
