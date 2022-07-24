@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCA158F4288DE2140017430A /* CocoaMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = CCA158F3288DE2140017430A /* CocoaMQTT */; };
+		CCDAC668288B64F80075B7E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC667288B64F80075B7E8 /* AppDelegate.swift */; };
+		CCDAC66A288B64F80075B7E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC669288B64F80075B7E8 /* SceneDelegate.swift */; };
+		CCDAC66C288B64F80075B7E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC66B288B64F80075B7E8 /* ViewController.swift */; };
+		CCDAC66F288B64F80075B7E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDAC66D288B64F80075B7E8 /* Main.storyboard */; };
+		CCDAC672288B64F80075B7E8 /* SprinklerSystem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC670288B64F80075B7E8 /* SprinklerSystem.xcdatamodeld */; };
+		CCDAC674288B65020075B7E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCDAC673288B65020075B7E8 /* Assets.xcassets */; };
+		CCDAC677288B65020075B7E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDAC675288B65020075B7E8 /* LaunchScreen.storyboard */; };
+		CCDAC682288B65020075B7E8 /* SprinklerSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC681288B65020075B7E8 /* SprinklerSystemTests.swift */; };
+		CCDAC68D288B65020075B7E8 /* SprinklerSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC68C288B65020075B7E8 /* SprinklerSystemUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCDAC67E288B65020075B7E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCDAC65C288B64F80075B7E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCDAC663288B64F80075B7E8;
+			remoteInfo = SprinklerSystem;
+		};
+		CCDAC689288B65020075B7E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCDAC65C288B64F80075B7E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCDAC663288B64F80075B7E8;
+			remoteInfo = SprinklerSystem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CCDAC664288B64F80075B7E8 /* SprinklerSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprinklerSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCDAC667288B64F80075B7E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCDAC669288B64F80075B7E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CCDAC66B288B64F80075B7E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCDAC66E288B64F80075B7E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCDAC671288B64F80075B7E8 /* SprinklerSystem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SprinklerSystem.xcdatamodel; sourceTree = "<group>"; };
+		CCDAC673288B65020075B7E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCDAC676288B65020075B7E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCDAC678288B65020075B7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCDAC67D288B65020075B7E8 /* SprinklerSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SprinklerSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCDAC681288B65020075B7E8 /* SprinklerSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprinklerSystemTests.swift; sourceTree = "<group>"; };
+		CCDAC683288B65020075B7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCDAC688288B65020075B7E8 /* SprinklerSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SprinklerSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCDAC68C288B65020075B7E8 /* SprinklerSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprinklerSystemUITests.swift; sourceTree = "<group>"; };
+		CCDAC68E288B65020075B7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCDAC661288B64F80075B7E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA158F4288DE2140017430A /* CocoaMQTT in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDAC67A288B65020075B7E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDAC685288B65020075B7E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCDAC65B288B64F80075B7E8 = {
+			isa = PBXGroup;
+			children = (
+				CCDAC666288B64F80075B7E8 /* SprinklerSystem */,
+				CCDAC680288B65020075B7E8 /* SprinklerSystemTests */,
+				CCDAC68B288B65020075B7E8 /* SprinklerSystemUITests */,
+				CCDAC665288B64F80075B7E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCDAC665288B64F80075B7E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCDAC664288B64F80075B7E8 /* SprinklerSystem.app */,
+				CCDAC67D288B65020075B7E8 /* SprinklerSystemTests.xctest */,
+				CCDAC688288B65020075B7E8 /* SprinklerSystemUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCDAC666288B64F80075B7E8 /* SprinklerSystem */ = {
+			isa = PBXGroup;
+			children = (
+				CCDAC667288B64F80075B7E8 /* AppDelegate.swift */,
+				CCDAC669288B64F80075B7E8 /* SceneDelegate.swift */,
+				CCDAC66B288B64F80075B7E8 /* ViewController.swift */,
+				CCDAC66D288B64F80075B7E8 /* Main.storyboard */,
+				CCDAC673288B65020075B7E8 /* Assets.xcassets */,
+				CCDAC675288B65020075B7E8 /* LaunchScreen.storyboard */,
+				CCDAC678288B65020075B7E8 /* Info.plist */,
+				CCDAC670288B64F80075B7E8 /* SprinklerSystem.xcdatamodeld */,
+			);
+			path = SprinklerSystem;
+			sourceTree = "<group>";
+		};
+		CCDAC680288B65020075B7E8 /* SprinklerSystemTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCDAC681288B65020075B7E8 /* SprinklerSystemTests.swift */,
+				CCDAC683288B65020075B7E8 /* Info.plist */,
+			);
+			path = SprinklerSystemTests;
+			sourceTree = "<group>";
+		};
+		CCDAC68B288B65020075B7E8 /* SprinklerSystemUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CCDAC68C288B65020075B7E8 /* SprinklerSystemUITests.swift */,
+				CCDAC68E288B65020075B7E8 /* Info.plist */,
+			);
+			path = SprinklerSystemUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCDAC663288B64F80075B7E8 /* SprinklerSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCDAC691288B65020075B7E8 /* Build configuration list for PBXNativeTarget "SprinklerSystem" */;
+			buildPhases = (
+				CCDAC660288B64F80075B7E8 /* Sources */,
+				CCDAC661288B64F80075B7E8 /* Frameworks */,
+				CCDAC662288B64F80075B7E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SprinklerSystem;
+			packageProductDependencies = (
+				CCA158F3288DE2140017430A /* CocoaMQTT */,
+			);
+			productName = SprinklerSystem;
+			productReference = CCDAC664288B64F80075B7E8 /* SprinklerSystem.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCDAC67C288B65020075B7E8 /* SprinklerSystemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCDAC694288B65020075B7E8 /* Build configuration list for PBXNativeTarget "SprinklerSystemTests" */;
+			buildPhases = (
+				CCDAC679288B65020075B7E8 /* Sources */,
+				CCDAC67A288B65020075B7E8 /* Frameworks */,
+				CCDAC67B288B65020075B7E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCDAC67F288B65020075B7E8 /* PBXTargetDependency */,
+			);
+			name = SprinklerSystemTests;
+			productName = SprinklerSystemTests;
+			productReference = CCDAC67D288B65020075B7E8 /* SprinklerSystemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CCDAC687288B65020075B7E8 /* SprinklerSystemUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCDAC697288B65020075B7E8 /* Build configuration list for PBXNativeTarget "SprinklerSystemUITests" */;
+			buildPhases = (
+				CCDAC684288B65020075B7E8 /* Sources */,
+				CCDAC685288B65020075B7E8 /* Frameworks */,
+				CCDAC686288B65020075B7E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCDAC68A288B65020075B7E8 /* PBXTargetDependency */,
+			);
+			name = SprinklerSystemUITests;
+			productName = SprinklerSystemUITests;
+			productReference = CCDAC688288B65020075B7E8 /* SprinklerSystemUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCDAC65C288B64F80075B7E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CCDAC663288B64F80075B7E8 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					CCDAC67C288B65020075B7E8 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CCDAC663288B64F80075B7E8;
+					};
+					CCDAC687288B65020075B7E8 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CCDAC663288B64F80075B7E8;
+					};
+				};
+			};
+			buildConfigurationList = CCDAC65F288B64F80075B7E8 /* Build configuration list for PBXProject "SprinklerSystem" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCDAC65B288B64F80075B7E8;
+			packageReferences = (
+				CCA158F2288DE2140017430A /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
+			);
+			productRefGroup = CCDAC665288B64F80075B7E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCDAC663288B64F80075B7E8 /* SprinklerSystem */,
+				CCDAC67C288B65020075B7E8 /* SprinklerSystemTests */,
+				CCDAC687288B65020075B7E8 /* SprinklerSystemUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCDAC662288B64F80075B7E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCDAC677288B65020075B7E8 /* LaunchScreen.storyboard in Resources */,
+				CCDAC674288B65020075B7E8 /* Assets.xcassets in Resources */,
+				CCDAC66F288B64F80075B7E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDAC67B288B65020075B7E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDAC686288B65020075B7E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCDAC660288B64F80075B7E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCDAC66C288B64F80075B7E8 /* ViewController.swift in Sources */,
+				CCDAC668288B64F80075B7E8 /* AppDelegate.swift in Sources */,
+				CCDAC66A288B64F80075B7E8 /* SceneDelegate.swift in Sources */,
+				CCDAC672288B64F80075B7E8 /* SprinklerSystem.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDAC679288B65020075B7E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCDAC682288B65020075B7E8 /* SprinklerSystemTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDAC684288B65020075B7E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCDAC68D288B65020075B7E8 /* SprinklerSystemUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCDAC67F288B65020075B7E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCDAC663288B64F80075B7E8 /* SprinklerSystem */;
+			targetProxy = CCDAC67E288B65020075B7E8 /* PBXContainerItemProxy */;
+		};
+		CCDAC68A288B65020075B7E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCDAC663288B64F80075B7E8 /* SprinklerSystem */;
+			targetProxy = CCDAC689288B65020075B7E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCDAC66D288B64F80075B7E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCDAC66E288B64F80075B7E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CCDAC675288B65020075B7E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCDAC676288B65020075B7E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCDAC68F288B65020075B7E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCDAC690288B65020075B7E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCDAC692288B65020075B7E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SprinklerSystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AparajitaGupta.SprinklerSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCDAC693288B65020075B7E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SprinklerSystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AparajitaGupta.SprinklerSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CCDAC695288B65020075B7E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SprinklerSystemTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AparajitaGupta.SprinklerSystemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SprinklerSystem.app/SprinklerSystem";
+			};
+			name = Debug;
+		};
+		CCDAC696288B65020075B7E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SprinklerSystemTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AparajitaGupta.SprinklerSystemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SprinklerSystem.app/SprinklerSystem";
+			};
+			name = Release;
+		};
+		CCDAC698288B65020075B7E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SprinklerSystemUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AparajitaGupta.SprinklerSystemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SprinklerSystem;
+			};
+			name = Debug;
+		};
+		CCDAC699288B65020075B7E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SprinklerSystemUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AparajitaGupta.SprinklerSystemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SprinklerSystem;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCDAC65F288B64F80075B7E8 /* Build configuration list for PBXProject "SprinklerSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCDAC68F288B65020075B7E8 /* Debug */,
+				CCDAC690288B65020075B7E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCDAC691288B65020075B7E8 /* Build configuration list for PBXNativeTarget "SprinklerSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCDAC692288B65020075B7E8 /* Debug */,
+				CCDAC693288B65020075B7E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCDAC694288B65020075B7E8 /* Build configuration list for PBXNativeTarget "SprinklerSystemTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCDAC695288B65020075B7E8 /* Debug */,
+				CCDAC696288B65020075B7E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCDAC697288B65020075B7E8 /* Build configuration list for PBXNativeTarget "SprinklerSystemUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCDAC698288B65020075B7E8 /* Debug */,
+				CCDAC699288B65020075B7E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCA158F2288DE2140017430A /* XCRemoteSwiftPackageReference "CocoaMQTT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/emqx/CocoaMQTT";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCA158F3288DE2140017430A /* CocoaMQTT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCA158F2288DE2140017430A /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
+			productName = CocoaMQTT;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		CCDAC670288B64F80075B7E8 /* SprinklerSystem.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CCDAC671288B64F80075B7E8 /* SprinklerSystem.xcdatamodel */,
+			);
+			currentVersion = CCDAC671288B64F80075B7E8 /* SprinklerSystem.xcdatamodel */;
+			path = SprinklerSystem.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CCDAC65C288B64F80075B7E8 /* Project object */;
+}
