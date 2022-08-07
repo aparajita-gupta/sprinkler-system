@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CCA158F4288DE2140017430A /* CocoaMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = CCA158F3288DE2140017430A /* CocoaMQTT */; };
+		CC541C63289F42D500605910 /* MqttClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC541C62289F42D500605910 /* MqttClient.swift */; };
+		CC541C6C289F444800605910 /* SwiftMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = CC541C6B289F444800605910 /* SwiftMQTT */; };
 		CCDAC668288B64F80075B7E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC667288B64F80075B7E8 /* AppDelegate.swift */; };
 		CCDAC66A288B64F80075B7E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC669288B64F80075B7E8 /* SceneDelegate.swift */; };
 		CCDAC66C288B64F80075B7E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC66B288B64F80075B7E8 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC541C62289F42D500605910 /* MqttClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MqttClient.swift; path = ../../../../../../../Volumes/scratch/sprinklerSystem/iosApp/SprinklerSystem/SprinklerSystem/MqttClient.swift; sourceTree = "<group>"; };
 		CCDAC664288B64F80075B7E8 /* SprinklerSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprinklerSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDAC667288B64F80075B7E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCDAC669288B64F80075B7E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCA158F4288DE2140017430A /* CocoaMQTT in Frameworks */,
+				CC541C6C289F444800605910 /* SwiftMQTT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +108,7 @@
 				CCDAC667288B64F80075B7E8 /* AppDelegate.swift */,
 				CCDAC669288B64F80075B7E8 /* SceneDelegate.swift */,
 				CCDAC66B288B64F80075B7E8 /* ViewController.swift */,
+				CC541C62289F42D500605910 /* MqttClient.swift */,
 				CCDAC66D288B64F80075B7E8 /* Main.storyboard */,
 				CCDAC673288B65020075B7E8 /* Assets.xcassets */,
 				CCDAC675288B65020075B7E8 /* LaunchScreen.storyboard */,
@@ -150,7 +153,7 @@
 			);
 			name = SprinklerSystem;
 			packageProductDependencies = (
-				CCA158F3288DE2140017430A /* CocoaMQTT */,
+				CC541C6B289F444800605910 /* SwiftMQTT */,
 			);
 			productName = SprinklerSystem;
 			productReference = CCDAC664288B64F80075B7E8 /* SprinklerSystem.app */;
@@ -224,7 +227,7 @@
 			);
 			mainGroup = CCDAC65B288B64F80075B7E8;
 			packageReferences = (
-				CCA158F2288DE2140017430A /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
+				CC541C6A289F444800605910 /* XCRemoteSwiftPackageReference "SwiftMQTT" */,
 			);
 			productRefGroup = CCDAC665288B64F80075B7E8 /* Products */;
 			projectDirPath = "";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCDAC66C288B64F80075B7E8 /* ViewController.swift in Sources */,
+				CC541C63289F42D500605910 /* MqttClient.swift in Sources */,
 				CCDAC668288B64F80075B7E8 /* AppDelegate.swift in Sources */,
 				CCDAC66A288B64F80075B7E8 /* SceneDelegate.swift in Sources */,
 				CCDAC672288B64F80075B7E8 /* SprinklerSystem.xcdatamodeld in Sources */,
@@ -601,21 +605,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CCA158F2288DE2140017430A /* XCRemoteSwiftPackageReference "CocoaMQTT" */ = {
+		CC541C6A289F444800605910 /* XCRemoteSwiftPackageReference "SwiftMQTT" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/emqx/CocoaMQTT";
+			repositoryURL = "https://github.com/aciidb0mb3r/SwiftMQTT";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.4;
+				minimumVersion = 3.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CCA158F3288DE2140017430A /* CocoaMQTT */ = {
+		CC541C6B289F444800605910 /* SwiftMQTT */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CCA158F2288DE2140017430A /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
-			productName = CocoaMQTT;
+			package = CC541C6A289F444800605910 /* XCRemoteSwiftPackageReference "SwiftMQTT" */;
+			productName = SwiftMQTT;
 		};
 /* End XCSwiftPackageProductDependency section */
 
