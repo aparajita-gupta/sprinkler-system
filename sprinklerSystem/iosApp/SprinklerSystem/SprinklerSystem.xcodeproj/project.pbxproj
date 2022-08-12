@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC541C63289F42D500605910 /* MqttClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC541C62289F42D500605910 /* MqttClient.swift */; };
+		CC3E4B3228A4D3D600C8088A /* SprinklerSystem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC3E4B3028A4D3D600C8088A /* SprinklerSystem.xcdatamodeld */; };
+		CC3E4B3728A4D41500C8088A /* MqttClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E4B3628A4D41500C8088A /* MqttClient.swift */; };
 		CC541C6C289F444800605910 /* SwiftMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = CC541C6B289F444800605910 /* SwiftMQTT */; };
 		CCDAC668288B64F80075B7E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC667288B64F80075B7E8 /* AppDelegate.swift */; };
 		CCDAC66A288B64F80075B7E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAC669288B64F80075B7E8 /* SceneDelegate.swift */; };
@@ -38,7 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CC541C62289F42D500605910 /* MqttClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MqttClient.swift; path = ../../../../../../../Volumes/scratch/sprinklerSystem/iosApp/SprinklerSystem/SprinklerSystem/MqttClient.swift; sourceTree = "<group>"; };
+		CC3E4B3128A4D3D600C8088A /* SprinklerSystem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SprinklerSystem.xcdatamodel; sourceTree = "<group>"; };
+		CC3E4B3628A4D41500C8088A /* MqttClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MqttClient.swift; sourceTree = "<group>"; };
 		CCDAC664288B64F80075B7E8 /* SprinklerSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprinklerSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDAC667288B64F80075B7E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCDAC669288B64F80075B7E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,9 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				CCDAC667288B64F80075B7E8 /* AppDelegate.swift */,
+				CC3E4B3028A4D3D600C8088A /* SprinklerSystem.xcdatamodeld */,
+				CC3E4B3628A4D41500C8088A /* MqttClient.swift */,
 				CCDAC669288B64F80075B7E8 /* SceneDelegate.swift */,
 				CCDAC66B288B64F80075B7E8 /* ViewController.swift */,
-				CC541C62289F42D500605910 /* MqttClient.swift */,
 				CCDAC66D288B64F80075B7E8 /* Main.storyboard */,
 				CCDAC673288B65020075B7E8 /* Assets.xcassets */,
 				CCDAC675288B65020075B7E8 /* LaunchScreen.storyboard */,
@@ -273,8 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCDAC66C288B64F80075B7E8 /* ViewController.swift in Sources */,
-				CC541C63289F42D500605910 /* MqttClient.swift in Sources */,
 				CCDAC668288B64F80075B7E8 /* AppDelegate.swift in Sources */,
+				CC3E4B3728A4D41500C8088A /* MqttClient.swift in Sources */,
+				CC3E4B3228A4D3D600C8088A /* SprinklerSystem.xcdatamodeld in Sources */,
 				CCDAC66A288B64F80075B7E8 /* SceneDelegate.swift in Sources */,
 				CCDAC672288B64F80075B7E8 /* SprinklerSystem.xcdatamodeld in Sources */,
 			);
@@ -624,6 +628,16 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
+		CC3E4B3028A4D3D600C8088A /* SprinklerSystem.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC3E4B3128A4D3D600C8088A /* SprinklerSystem.xcdatamodel */,
+			);
+			currentVersion = CC3E4B3128A4D3D600C8088A /* SprinklerSystem.xcdatamodel */;
+			path = SprinklerSystem.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		CCDAC670288B64F80075B7E8 /* SprinklerSystem.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
