@@ -13,14 +13,9 @@ import relay
 
 
 print('Start connecting...')
-ssid = 'UttamAdaptivePlume'
-password = '0710062109070429'
-#ssid = 'AmazinglySlowWifi'
-#password = '#AsSlowAsIAm!778'
-#ssid = 'ukgPixel1'
-#password = 'uguptasanju'
+ssid = '<ssid>'
+password = '<pwd>'
 mqtt_server = '192.168.40.231' # Replace with the IP or URI of the MQTT server you use
-#mqtt_server = '98.51.182.241'
 client_id = ubinascii.hexlify(machine.unique_id())
 topic_sub = b'sprinkler' # This is the topic you want to subscribe to
 last_message = 0
