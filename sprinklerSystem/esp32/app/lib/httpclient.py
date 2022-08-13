@@ -89,6 +89,7 @@ class HttpClient:
                 gc.collect()
                 s = ussl.wrap_socket(s, server_hostname=host)
             s.write(b'%s /%s HTTP/1.0\r\n' % (method, path))
+            print("1 - ")
             if not 'Host' in headers:
                 s.write(b'Host: %s\r\n' % host)
             # Iterate over keys to avoid tuple alloc
@@ -124,15 +125,17 @@ class HttpClient:
                 with open(file, 'r') as file_object:
                     for line in file_object:
                         s.write(line + '\n')
+                        print("LINE: ".format(line))
             elif custom:
                 custom(s)
             else:
                 s.write(b'\r\n')
 
             l = s.readline()
-            #print('l: ', l)
+            print('l: ', l)
             l = l.split(None, 2)
             status = int(l[1])
+            print("2 - status : ", status)
             reason = ''
             if len(l) > 2:
                 reason = l[2].rstrip()
@@ -140,7 +143,6 @@ class HttpClient:
                 l = s.readline()
                 if not l or l == b'\r\n':
                     break
-                #print('l: ', l)
                 if l.startswith(b'Transfer-Encoding:'):
                     if b'chunked' in l:
                         raise ValueError('Unsupported ' + l)
@@ -148,16 +150,19 @@ class HttpClient:
                     if status in [301, 302, 303, 307, 308]:
                         redirect = l[10:-2].decode()
                     else:
+                        print('NotImplementedError')
                         raise NotImplementedError("Redirect {} not yet supported".format(status))
         except OSError:
             s.close()
             raise
 
         if redirect:
+            print('redirect: {}'.format(redirect))
             s.close()
             if status in [301, 302, 303]:
-                return self.request('GET', url=redirect, **kw)
+                return self.request('GET', url=redirect)
             else:
+                print('Requesting (else) again with status {}'.format(status))
                 return self.request(method, redirect, **kw)
         else:
             resp = Response(s,saveToFile)

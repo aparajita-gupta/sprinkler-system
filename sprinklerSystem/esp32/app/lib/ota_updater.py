@@ -74,15 +74,16 @@ class OTAUpdater:
         -------
             bool: true if a new version is available, false otherwise
         """
-
+        print("install_update_if_available...")
         (current_version, latest_version) = self._check_for_new_version()
         if latest_version > current_version:
             log.info('Updating to version {}...'.format(latest_version))
             self._create_new_version_file(latest_version)
             self._download_new_version(latest_version)
-            self._copy_secrets_file()
-            self._delete_old_version()
-            self._install_new_version()
+            #self._copy_secrets_file()
+            self._install_new_version_without_app()
+            #self._delete_old_version()
+            #self._install_new_version()
             return True
 
         return False
@@ -111,12 +112,15 @@ class OTAUpdater:
         return (current_version, latest_version)
 
     def _create_new_version_file(self, latest_version):
+        log.info("Creating new version dir: " + self.new_version_dir)
+        log.info("Creating new version: " + latest_version)
         self.mkdir(self.modulepath(self.new_version_dir))
         with open(self.modulepath(self.new_version_dir + '/.version'), 'w') as versionfile:
             versionfile.write(latest_version)
             versionfile.close()
 
     def get_version(self, directory, version_file_name='.version'):
+        log.info("getting version - " + directory)
         if version_file_name in os.listdir(directory):
             with open(directory + '/' + version_file_name) as f:
                 version = f.read()
@@ -143,30 +147,42 @@ class OTAUpdater:
         log.info('Version {} downloaded to {}'.format(version, self.modulepath(self.new_version_dir)))
 
     def _download_all_files(self, version, sub_dir=''):
-        url = 'https://api.github.com/repos/{}/contents{}{}{}?ref=refs/tags/{}'.format(self.github_repo, self.github_src_dir, self.main_dir, sub_dir, version)
+        url = 'https://api.github.com/repos/{}/contents{}{}{}/?ref=refs/tags/{}'.format(self.github_repo, self.github_src_dir, self.main_dir, sub_dir, version)
+        #url = 'https://api.github.com/repositories/517446250/contents{}{}/?ref=refs/tags/{}'.format(self.github_src_dir, sub_dir, version)
+        #url = 'https://api.github.com/repositories/517446250/contentssprinklerSystem/esp32{}'.format(sub_dir)
         gc.collect()
+        log.info('URL: {}'.format(url))
         file_list = self.http_client.get(url)
+        print(file_list)
         file_list_json = file_list.json()
+        #log.info('file json: {}'.format(file_list_json))
         for file in file_list_json:
             path = self.modulepath(self.new_version_dir + '/' + file['path'].replace(self.main_dir + '/', '').replace(self.github_src_dir, ''))
+            log.info('Path: {} filePath: {} fileName: {} fileType {}'.format(path, file['path'], file['name'], file['type']))
             if file['type'] == 'file':
                 gitPath = file['path']
-                log.info('\tDownloading: ', gitPath, 'to', path)
-                self._download_file(version, gitPath, path)
+                log.info('\tDownloading: {} {} {}'.format(gitPath, 'to', path))
+                #self._download_file(version, gitPath, path)
+                self._download_file_Url(file['download_url'], path)
             elif file['type'] == 'dir':
-                log.info('Creating dir', path)
                 self.mkdir(path)
                 self._download_all_files(version, sub_dir + '/' + file['name'])
             gc.collect()
 
         file_list.close()
 
+    def _download_file_Url(self, url, path):
+        self.http_client.get(url, saveToFile=path)
+
     def _download_file(self, version, gitPath, path):
-        self.http_client.get('https://raw.githubusercontent.com/{}/{}/{}'.format(self.github_repo, version, gitPath), saveToFile=path)
+        url = 'https://raw.githubusercontent.com/{}/{}/{}'.format(self.github_repo, version, gitPath)
+        log.info(url)
+        self.http_client.get(url, saveToFile=path)
 
     def _copy_secrets_file(self):
         if self.secrets_file:
-            fromPath = self.modulepath(self.main_dir + '/' + self.secrets_file)
+            #fromPath = self.modulepath(self.main_dir + '/' + self.secrets_file)
+            fromPath = self.modulepath(self.secrets_file)
             toPath = self.modulepath(self.new_version_dir + '/' + self.secrets_file)
             log.info('Copying secrets file from {} to {}'.format(fromPath, toPath))
             self._copy_file(fromPath, toPath)
@@ -178,6 +194,18 @@ class OTAUpdater:
         log.info('Deleting old version at {} ...'.format(self.modulepath(self.main_dir)))
         self._rmtree(self.modulepath(self.main_dir))
         log.info('Deleted old version at {} ...'.format(self.modulepath(self.main_dir)))
+
+    def _install_new_version_without_app(self):
+        log.info('Copying next/app/* to next/ ...')
+        self._copy_directory('next/app/', 'next/')
+        self._rmtree('next/app')
+        self._copy_file('next/main.py', 'main.py')
+        os.rename('next', 'app')
+        log.info('Update installed, please reboot now')
+        import machine
+        machine.reset()
+
+
 
     def _install_new_version(self):
         log.info('Installing new version at {} ...'.format(self.modulepath(self.main_dir)))
@@ -234,15 +262,18 @@ class OTAUpdater:
             return False
 
     def _mk_dirs(self, path:str):
+        log.info("Requesting directory" + path)
         paths = path.split('/')
 
         pathToCreate = ''
         for x in paths:
+            log.info("Creating directory: " + x)
             self.mkdir(pathToCreate + x)
             pathToCreate = pathToCreate + x + '/'
 
     # different micropython versions act differently when directory already exists
     def mkdir(self, path:str):
+        log.info("Creating directory: " + path)
         try:
             os.mkdir(path)
         except OSError as exc:
@@ -252,3 +283,4 @@ class OTAUpdater:
 
     def modulepath(self, path):
         return self.module + '/' + path if self.module else path
+

@@ -76,10 +76,10 @@ def sub_cb(topic, msg):
         #update code OTA
         try:
           from lib.ota_updater import OTAUpdater
-          otaUpdater = OTAUpdater('https://github.com/aparajita-gupta/sprinkler-system', github_src_dir='sprinklerSystem', main_dir='app', secrets_file="secret.json")
+          otaUpdater = OTAUpdater('https://github.com/aparajita-gupta/sprinkler-system', github_src_dir='sprinklerSystem', main_dir='esp32', secrets_file="secret.json")
           otaUpdater.install_update_if_available()
         except:
-            log.info("Got exception in update")
+          log.info("Got exception in update")
     elif topic == b'schedule':
         log.info('ESP received schedule')
         try:
