@@ -196,18 +196,28 @@ class OTAUpdater:
         log.info('Deleted old version at {} ...'.format(self.modulepath(self.main_dir)))
 
     def _install_new_version_without_app(self):
-        log.info('Copying next/app/* to next/ ...')
-        self._copy_directory('next/app/', 'next/')
+        log.info('Copying /next/app/* to /next/ ...')
         os.chdir('next')
+        self._copy_directory('app/', '.')
+        log.info('Deleting install files ...')
         self._rmtree('app')
         os.chdir('/')
-        self._copy_file('next/main.py', 'main.py')
-        self._copy_file('next/.version', '.version')
+        log.info('Copying main ...')
+        self._copy_file('/next/main.py', 'main.py')
+        os.remove('/next/main.py')
+        log.info('Copying version ...')
+        self._copy_file('/next/.version', '.version')
+        os.remove('/next/.version')
+        log.info('Deleting old app ...')
         self._rmtree('app')
+        log.info('Renaming to next to app ...')
         os.rename('next', 'app')
         log.info('Update installed, please reboot now')
         import machine
         machine.reset()
+
+
+
 
     def _install_new_version(self):
         log.info('Installing new version at {} ...'.format(self.modulepath(self.main_dir)))
@@ -264,7 +274,7 @@ class OTAUpdater:
             return False
 
     def _mk_dirs(self, path:str):
-        log.info("Requesting directory" + path)
+        log.info("Requesting directory: " + path)
         paths = path.split('/')
 
         pathToCreate = ''
@@ -285,4 +295,5 @@ class OTAUpdater:
 
     def modulepath(self, path):
         return self.module + '/' + path if self.module else path
+
 
