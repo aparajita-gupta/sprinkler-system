@@ -198,14 +198,16 @@ class OTAUpdater:
     def _install_new_version_without_app(self):
         log.info('Copying next/app/* to next/ ...')
         self._copy_directory('next/app/', 'next/')
-        self._rmtree('next/app')
+        os.chdir('next')
+        self._rmtree('app')
+        os.chdir('/')
         self._copy_file('next/main.py', 'main.py')
+        self._copy_file('next/.version', '.version')
+        self._rmtree('app')
         os.rename('next', 'app')
         log.info('Update installed, please reboot now')
         import machine
         machine.reset()
-
-
 
     def _install_new_version(self):
         log.info('Installing new version at {} ...'.format(self.modulepath(self.main_dir)))

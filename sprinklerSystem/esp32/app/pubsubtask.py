@@ -72,7 +72,7 @@ def sub_cb(topic, msg):
         machine.reset()
         #reboot esp
     elif topic == b'update':
-        log.info('ESP received uodate')
+        log.info('ESP received update')
         #update code OTA
         try:
           from lib.ota_updater import OTAUpdater

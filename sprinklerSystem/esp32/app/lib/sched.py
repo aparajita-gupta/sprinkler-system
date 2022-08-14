@@ -4,9 +4,9 @@
 # Released under the MIT License (MIT) - see LICENSE file
 
 import uasyncio as asyncio
-from primitives import launch
+from .primitives import launch
 from time import time
-from cron import cron
+from .cron import cron
 
 async def schedule(func, *args, times=None, **kwargs):
     fcron = cron(**kwargs)
