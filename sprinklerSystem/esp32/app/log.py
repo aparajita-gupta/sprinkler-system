@@ -11,7 +11,7 @@ def free(full=False):
   A = gc.mem_alloc()
   T = F+A
   P = '{0:.2f}%'.format(F/T*100)
-  if not full: return P
+  if not full: return ('Free: {}'.format(P))
   else : return ('Total:{0} Free:{1} ({2})'.format(T,F,P))
 
 def info(msg, console_only=False):

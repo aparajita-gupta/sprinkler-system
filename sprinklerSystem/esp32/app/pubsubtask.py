@@ -5,6 +5,7 @@ import log
 import relay
 import time
 import uasyncio
+import utils
 
 topics = [ b'sprinkler/zone1',
            b'sprinkler/zone2',
@@ -14,8 +15,7 @@ topics = [ b'sprinkler/zone1',
            b'update',
            b'schedule']
 #mqtt_server = '98.51.182.241'
-mqtt_server = '192.168.40.231'
-client_id = ubinascii.hexlify(machine.unique_id())
+
 r = relay.Relay()
 
 def restart_and_reconnect():
@@ -89,6 +89,7 @@ def sub_cb(topic, msg):
             f = open('./app/schedule.json', 'w')
             f.write(msg)
             f.close()
+            machine.reset()
         except:
             log.info("Couldn't update schedule")
     else:
@@ -96,7 +97,9 @@ def sub_cb(topic, msg):
 
 
 def connect_and_subscribe():
-    global client_id, mqtt_server, client
+    mqtt_server = utils.getMQTTServerIP()
+    client_id = ubinascii.hexlify(machine.unique_id())
+    global client
     log.info('Connecting server: {}'.format(mqtt_server))
     client = MQTTClient(client_id, mqtt_server)
     log.info('Connected to %s MQTT broker'.format(mqtt_server))
