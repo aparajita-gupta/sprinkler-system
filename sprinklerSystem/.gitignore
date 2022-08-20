@@ -1,3 +1,4 @@
 *.DS_Store
-esp32/secret.py
+esp32/secret.json
+
 
